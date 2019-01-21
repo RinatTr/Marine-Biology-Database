@@ -1,8 +1,8 @@
-# Unit 3 Exam
+# Marine Biology Database and API
 
-A marine biology research team needs our help! Their old database wasn't doing a great job at organizing their research data. They do a lot of work in the field, and they keep track of all of it- they log every sighting of an animal species, they place GPS tags on animals to keep track of them, and they make sure to keep track of which habitats are home to which species.
+The following database is meant to help Marine Biology research teams to keep track of their field work.
 
-Therefore, we are going to create a database for them with the following tables:
+Implemented Tables:
 
 - **Researchers**: Rows represent each individual member of the research team.
 - **Species**: Rows represent each different type of animal species (e.g. dolphin or sting ray).
@@ -20,12 +20,12 @@ Based on these descriptions, we can conclude:
 - Sightings have one Researcher, one Species, and one Habitat (a particular researcher sees a species in a habitat - this is a join table).
 - Habitats have many sightings (many sightings happen in a specific habitat).
 
-Take a look at `schema.md` in this repo for a detailed description of what the tables should look like, as well as seed data describing what they should contain.
+Take a look at `schema.md` in this repo for a detailed description of what the tables look like, as well as seed data describing what they should contain.
 
-Once we create our database, we need to provide the research team with a robust RESTful API to make it easy for them to see and update information. Take a look at `routes.md` for a full list of the routes this API should have. Please make sure to link it up with your Postgres database!
+Also provided a robust RESTful API to make it easy for the research team to see and update information. Take a look at `routes.md` for a full list of the routes this API has, which is linked up to postgres.
 
-The format for all responses should be a JSON object with up to three keys:
+All responses formated as JSON object with the following three keys:
 
 - `status` - Either `success` or `error`
 - `message` - Either `got all users` or an error message
-- `body` - Your response from SQL (if necessary - not necessary for POST or DELETE requests).
+- `body` - The response from SQL (if necessary - not necessary for POST or DELETE requests).
